@@ -129,8 +129,23 @@ footer{
 }
 
 /* hide scrollbar */
-.slider::-webkit-scrollbar{
-    display:none;
+.slider{
+    display:flex;
+    overflow-x:auto;
+    scroll-snap-type:x mandatory;
+    gap:10px;
+    border-radius:10px;
+    scroll-behavior:smooth;
+    -webkit-overflow-scrolling: touch;
+}
+
+.slider::after{
+    content:"← swipe →";
+    color:#25D366;
+    font-size:12px;
+    position:absolute;
+    right:10px;
+    bottom:5px;
 }
 </style>
 </head>
@@ -257,7 +272,9 @@ footer{
         Message Me Now
     </a>
 </section>
-
+<p style="margin-top:10px; color:#25D366; font-weight:bold;">
+Available for Fast Delivery • Affordable Pricing • DM Now
+</p>
 <footer>
     © 2026 Mubarak | Built with passion
 </footer>
